@@ -1,4 +1,4 @@
-package me.destro.playground.android.datasources.typicode.model
+package me.destro.learning.playground.android.core.api.typicode.model
 data class Company(
     val bs: String,
     val catchPhrase: String,
