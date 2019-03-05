@@ -8,10 +8,15 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-        <Button android:id="@+id/observable_errors"
+        <TextView
+                android:text="Examples"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/google_navigation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="@string/google_navigation"/>
 
     </LinearLayout>
 </layout>

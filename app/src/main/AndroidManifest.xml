@@ -13,10 +13,7 @@
         </activity>
         <activity android:name=".reactivex.ObservableErrors">
         </activity>
-        <activity
-                android:name=".architecture.simple.SimpleArchitecture"
-                android:label="@string/title_activity_simple_architecture"
-                android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".architecture.simple.SimpleArchitecture">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

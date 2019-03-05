@@ -1,15 +1,21 @@
 package me.destro.playground.android
 
+import android.content.Intent
+import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
-import io.reactivex.Observer as RxObserver
-import io.reactivex.Observable as RxObservable
+import me.destro.playground.android.databinding.ActivityMainBinding
+import me.destro.playground.android.navigation.NavigationHostActivity
 
 class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.activity_main)
+        binding.googleNavigation.setOnClickListener {
+            val intent = Intent(this, NavigationHostActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
