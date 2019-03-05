@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import me.destro.playground.android.databinding.ActivityMainBinding
 import me.destro.playground.android.navigation.NavigationHostActivity
+import me.destro.playground.android.reactivex.ObservableErrors
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        binding.observableErrors.setOnClickListener {
+            val intent = Intent(this, ObservableErrors::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -18,5 +18,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/google_navigation"/>
 
+        <Button android:id="@+id/observable_errors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/observables"/>
+
     </LinearLayout>
 </layout>
