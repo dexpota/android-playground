@@ -5,19 +5,19 @@
             app:startDestination="@id/loginFragment">
 
     <fragment android:id="@+id/loginFragment"
-              android:name="me.destro.playground.android.navigation.destinations.LoginFragment"
+              android:name="me.destro.learning.playground.android.navigation.destinations.LoginFragment"
               android:label="fragment_login" tools:layout="@layout/fragment_login">
         <action android:id="@+id/action_loginFragment_to_registerFragment" app:destination="@id/registerFragment"/>
         <action android:id="@+id/action_loginFragment_to_socialFragment" app:destination="@id/socialFragment"/>
     </fragment>
     <fragment android:id="@+id/registerFragment"
-              android:name="me.destro.playground.android.navigation.destinations.RegisterFragment"
+              android:name="me.destro.learning.playground.android.navigation.destinations.RegisterFragment"
               android:label="fragment_register" tools:layout="@layout/fragment_register"/>
     <fragment android:id="@+id/userFragment"
-              android:name="me.destro.playground.android.navigation.destinations.UserFragment"
+              android:name="me.destro.learning.playground.android.navigation.destinations.UserFragment"
               android:label="fragment_user" tools:layout="@layout/fragment_user"/>
     <fragment android:id="@+id/socialFragment"
-              android:name="me.destro.playground.android.navigation.destinations.SocialFragment"
+              android:name="me.destro.learning.playground.android.navigation.destinations.SocialFragment"
               android:label="fragment_social" tools:layout="@layout/fragment_social">
         <action android:id="@+id/action_socialFragment_to_userFragment" app:destination="@id/userFragment"/>
     </fragment>

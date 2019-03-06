@@ -1,12 +1,11 @@
-package me.destro.playground.android.navigation.destinations
+package me.destro.learning.playground.android.navigation.destinations
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-import me.destro.playground.android.R
+import me.destro.learning.playground.android.navigation.R
 
 class SocialFragment : Fragment() {
 

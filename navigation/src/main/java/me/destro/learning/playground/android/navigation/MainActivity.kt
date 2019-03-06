@@ -1,12 +1,11 @@
-package me.destro.playground.android.navigation
+package me.destro.learning.playground.android.navigation
 
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import me.destro.playground.android.R
-import me.destro.playground.android.databinding.ActivityNavigationHostBinding
+import me.destro.learning.playground.android.navigation.databinding.ActivityNavigationHostBinding
 
-class NavigationHostActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
