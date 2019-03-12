@@ -2,15 +2,48 @@
 <layout
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".destinations.RegisterFragment">
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <EditText
+                android:id="@+id/username"
+                android:hint="@string/username"
+                android:autofillHints="AUTOFILL_HINT_USERNAME"
+                android:inputType="text"
+                android:layout_margin="32dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"/>
+                android:layout_height="wrap_content"
+                tools:ignore="UnusedAttribute"/>
 
-    </FrameLayout>
+        <EditText
+                android:id="@+id/password"
+                android:hint="@string/password"
+                android:autofillHints="AUTOFILL_HINT_PASSWORD"
+                android:inputType="textPassword"
+                android:layout_margin="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UnusedAttribute"/>
+
+        <EditText
+                android:id="@+id/password_confirmation"
+                android:hint="@string/confirm_password"
+                android:autofillHints="AUTOFILL_HINT_PASSWORD"
+                android:inputType="textPassword"
+                android:layout_margin="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UnusedAttribute"/>
+
+        <Button
+                android:id="@+id/register"
+                android:layout_margin="32dp"
+                android:text="@string/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </layout>
