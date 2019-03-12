@@ -20,7 +20,7 @@ class LoginFragment : Fragment() {
 
         binding.login.setOnClickListener {
             val navController = NavHostFragment.findNavController(this)
-            navController.navigate(R.id.socialFragment)
+            navController.navigate(R.id.subgraph)
         }
 
         binding.register.setOnClickListener {
