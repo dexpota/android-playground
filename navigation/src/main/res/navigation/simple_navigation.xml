@@ -23,5 +23,8 @@
         <fragment android:id="@+id/userFragment"
                   android:name="me.destro.learning.playground.android.navigation.destinations.UserFragment"
                   android:label="fragment_user" tools:layout="@layout/fragment_user"/>
+        <action android:id="@+id/action_global_loginFragment" app:destination="@id/loginFragment"/>
     </navigation>
+
+    <action android:id="@+id/action_global_loginFragment2" app:destination="@id/loginFragment"/>
 </navigation>

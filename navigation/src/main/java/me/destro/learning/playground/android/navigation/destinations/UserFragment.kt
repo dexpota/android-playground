@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import me.destro.learning.playground.android.navigation.R
 import me.destro.learning.playground.android.navigation.databinding.FragmentUserBinding
 
@@ -16,6 +17,12 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater, R.layout.fragment_user, container, false)
+
+        binding.logout.setOnClickListener {
+
+            findNavController().navigate(R.id.action_global_loginFragment)
+        }
+
         return binding.root
     }
 
