@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import me.destro.learning.playground.android.navigation.R
 import me.destro.learning.playground.android.navigation.databinding.FragmentLoginBinding
 
@@ -19,7 +19,9 @@ class LoginFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
 
-        binding.login.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.subgraph))
+        binding.login.setOnClickListener {
+            findNavController().navigate(R.id.action_registration_pop)
+        }
         binding.register.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.registerFragment))
 
         return binding.root

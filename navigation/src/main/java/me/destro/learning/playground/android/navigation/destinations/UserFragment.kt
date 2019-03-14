@@ -18,7 +18,7 @@ class UserFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentUserBinding>(inflater, R.layout.fragment_user, container, false)
 
-        binding.logout.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_global_loginFragment))
+        binding.logout.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.registration))
 
         return binding.root
     }
