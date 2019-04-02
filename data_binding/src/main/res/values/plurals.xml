@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_name">
+        <item quantity="zero">Non hai nessun hobby</item>
+        <item quantity="one">%d hobby</item>
+        <item quantity="other">%d hobbies</item>
+    </plurals>
+</resources>

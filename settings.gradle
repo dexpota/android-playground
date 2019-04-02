@@ -1,1 +1,1 @@
-include ':app', ':core', ':navigation', ':support_design_samples'
+include ':app', ':core', ':navigation', ':support_design_samples', ':data_binding'
