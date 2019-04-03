@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         waveDrawable = new Wave();
         waveDrawable.setBounds(0, 0, 100, 100);
-        waveDrawable.setColor(getResources().getColor(R.color.colorAccent));
-
-        ContextCompat.getColor(this, R.color.colorAccent);
+        waveDrawable.setColor(ContextCompat.getColor(this, R.color.colorAccent));
 
         binding.tv.setCompoundDrawables(waveDrawable, null, null, null);
 
