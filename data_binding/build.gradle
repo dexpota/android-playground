@@ -9,7 +9,7 @@ android {
 
 
     defaultConfig {
-        applicationId "me.destro.learning.playground.android.databinding"
+        applicationId "me.destro.android.databinding"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1

@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <!-- Events can be bound to handler methods directly. -->
-        <variable name="userReaction" type="me.destro.learning.playground.android.databinding.reactions.UserReaction"/>
-        <variable name="user" type="me.destro.learning.playground.android.databinding.model.User" />
-        <variable name="observableUser" type="me.destro.learning.playground.android.databinding.model.ObservableUser" />
+        <variable name="userReaction" type="me.destro.android.databinding.reactions.UserReaction"/>
+        <variable name="user" type="me.destro.android.databinding.model.User" />
+        <variable name="observableUser" type="me.destro.android.databinding.model.ObservableUser" />
     </data>
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"

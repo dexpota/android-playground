@@ -7,6 +7,6 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_simple_architecture"
-        tools:context=".architecture.simple.SimpleArchitecture">
+        tools:context="me.destro.android.playground.architecture.simple.SimpleArchitecture">
 
 </android.support.constraint.ConstraintLayout>
