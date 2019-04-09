@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <!-- Events can be bound to handler methods directly. -->
         <variable name="userReaction" type="me.destro.android.databinding.reactions.UserReaction"/>
-        <variable name="user" type="me.destro.android.databinding.model.User" />
-        <variable name="observableUser" type="me.destro.android.databinding.model.ObservableUser" />
+        <variable name="user" type="me.destro.android.databinding.model.User"/>
+        <variable name="observableUser" type="me.destro.android.databinding.model.ObservableUser"/>
+
+        <import type="me.destro.android.core.utilities.SpannableUtils" />
+        <import type="android.text.TextUtils" />
     </data>
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:context=".MainActivity">
 
         <!-- Property Reference -->
         <!-- Listener bindings are binding expressions that run when an event happens. -->
         <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.name}"
-            android:onClick="@{() -> userReaction.onNameClicked(user)}"
-            tools:text="@tools:sample/first_names" />
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/user_name(SpannableUtils.bold(user.name))}"
+                android:onClick="@{() -> userReaction.onNameClicked(user)}"
+                tools:text="@tools:sample/first_names"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@{TextUtils.concat(@string/user_name, SpannableUtils.bold(user.name))}"/>
 
         <!-- Data binding allows you to write expression handling events that are dispatched from the views -->
         <!-- To assign an event to its handler, use a normal binding expression, with the value being the method name to call -->
         <TextView
-            android:id="@+id/surname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.surname}"
-            android:onClick="@{userReaction::onSurnameClicked}"
-            tools:text="@tools:sample/first_names" />
+                android:id="@+id/surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.surname}"
+                android:onClick="@{userReaction::onSurnameClicked}"
+                tools:text="@tools:sample/first_names"/>
 
         <!-- The null coalescing operator chooses the value on the right if is not null, otherwise it picks the value on the right. -->
         <TextView
-            android:id="@+id/nickname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.nickname ?? @string/no_nickname}"
-            tools:text="nickname" />
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.nickname ?? @string/no_nickname}"
+                tools:text="nickname"/>
 
         <TextView
-            android:id="@+id/name_surname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{@string/formatted_name_surname(user.name, user.surname)}"/>
+                android:id="@+id/name_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/formatted_name_surname(user.name, user.surname)}"/>
 
         <!-- Collections can be accessed using the [] operator. -->
         <TextView
-            android:id="@+id/hobbies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.hobbies[0]}"
-            tools:text="hobby" />
+                android:id="@+id/hobbies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.hobbies[0]}"
+                tools:text="hobby"/>
 
         <!-- Using plurals -->
         <TextView
-            android:id="@+id/how_many_hobbies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{@plurals/plural_name(user.hobbies.size(), user.hobbies.size())}"
-            tools:text="0 hobby" />
+                android:id="@+id/how_many_hobbies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@plurals/plural_name(user.hobbies.size(), user.hobbies.size())}"
+                tools:text="0 hobby"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> userReaction.onSurnameClicked(observableUser)}"
-            android:text="@{observableUser.lastName}" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> userReaction.onSurnameClicked(observableUser)}"
+                android:text="@{observableUser.lastName}"/>
 
     </LinearLayout>
 </layout>
