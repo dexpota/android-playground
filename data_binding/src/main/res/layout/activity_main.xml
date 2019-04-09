@@ -8,8 +8,8 @@
         <variable name="user" type="me.destro.android.databinding.model.User"/>
         <variable name="observableUser" type="me.destro.android.databinding.model.ObservableUser"/>
 
-        <import type="me.destro.android.core.utilities.SpannableUtils" />
-        <import type="android.text.TextUtils" />
+        <import type="me.destro.android.core.utilities.SpannableUtils"/>
+        <import type="android.text.TextUtils"/>
     </data>
     <LinearLayout
             xmlns:tools="http://schemas.android.com/tools"
@@ -29,8 +29,16 @@
                 android:onClick="@{() -> userReaction.onNameClicked(user)}"
                 tools:text="@tools:sample/first_names"/>
 
+        <!-- TODO watch out for null values -->
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                   android:text="@{TextUtils.concat(@string/user_name, SpannableUtils.bold(user.name))}"/>
+
+        <!-- TODO watch out for null values -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@{TextUtils.expandTemplate(@string/hello_username, SpannableUtils.bold(user.name))}"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@{user.nickname}"/>
 
         <!-- Data binding allows you to write expression handling events that are dispatched from the views -->
         <!-- To assign an event to its handler, use a normal binding expression, with the value being the method name to call -->

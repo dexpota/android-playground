@@ -4,4 +4,5 @@
     <string name="formatted_name_surname">Your name is %s and your surname is %s.</string>
     <string name="no_nickname">No nickname for you.</string>
     <string name="user_name">Name: %s</string>
+    <string name="hello_username">Welcome back, ^1!</string>
 </resources>
