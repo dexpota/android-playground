@@ -9,6 +9,8 @@ import me.destro.android.databinding.model.ObservableUser;
 import me.destro.android.databinding.databinding.ActivityMainBinding;
 import me.destro.android.databinding.model.User;
 import me.destro.android.databinding.reactions.UserReaction;
+import org.joda.time.LocalDateTime;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         List<String> hobbies = Arrays.asList(null, "elettronica", "informatica");
         // In this case if hobbies is null nothing bad happens.
-        User user = new User("Fabrizio", "Destro", null, hobbies);
+        LocalDateTime now = LocalDateTime.now();
+        User user = new User(0,"Fabrizio", "Destro", null, now.toDate(), hobbies);
         UserReaction reaction = new UserReaction();
 
         ObservableUser observableUser = new ObservableUser();
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO this is a data mapping functionality, move it from here
     private User convert(me.destro.android.core.api.typicode.model.User user) {
-        return new User(user.getName(), "Missing", user.getUsername(), null);
+        LocalDateTime now = LocalDateTime.now();
+        return new User(user.getId(), user.getName(), "Missing", user.getUsername(), now.toDate(), null);
     }
 }

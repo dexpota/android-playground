@@ -5,4 +5,7 @@
     <string name="no_nickname">No nickname for you.</string>
     <string name="user_name">Name: %s</string>
     <string name="hello_username">Welcome back, ^1!</string>
+
+    <string name="date_format">%1$tm %1$te,%1$tY</string>
+    <string name="last_login">Your last login was on ^1</string>
 </resources>
