@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         )
 
         binding.alertDialog.setOnClickListener {
-            val alertDialog = AlertDialog.Builder(this)
-                .setTitle("Titolo")
-                .setMessage("Messaggio")
-                .setPositiveButton("Ok", null)
-                .setNegativeButton("No", null)
-                .setNeutralButton("Neutral", null)
+            AlertDialog.Builder(this)
+                .setTitle(getString(R.string.dialog_generic_title))
+                .setMessage(getString(R.string.dialog_generic_message))
+                .setPositiveButton(getString(R.string.dialog_generic_positive), null)
+                .setNegativeButton(getString(R.string.dialog_generic_negative), null)
+                .setNeutralButton(getString(R.string.dialog_generic_neutral), null)
                 .show()
         }
 
