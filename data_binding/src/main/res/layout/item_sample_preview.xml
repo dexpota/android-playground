@@ -19,37 +19,62 @@
             cardview:contentPadding="0dp"
             tools:showIn="@layout/activity_examples">
         <ImageView
+                android:background="@color/colorPrimary"
                 android:id="@+id/image"
                 android:layout_height="100dp"
                 android:layout_width="match_parent"
                 android:scaleType="center"
                 android:src="@drawable/ic_android_black_24dp"
-                android:tint="@android:color/white"
-                android:background="@color/colorPrimary"/>
+                android:tint="@android:color/white"/>
 
         <android.support.constraint.ConstraintLayout
-                android:layout_marginTop="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
                 android:layout_width="match_parent">
 
             <TextView android:id="@+id/title"
                       android:layout_height="wrap_content"
+                      android:layout_marginEnd="8dp"
                       android:layout_marginStart="8dp"
                       android:layout_marginTop="8dp"
-                      android:layout_width="wrap_content"
+                      android:layout_width="0dp"
+                      android:textAppearance="@style/TextAppearance.App.Header"
+                      app:layout_constraintEnd_toEndOf="parent"
                       app:layout_constraintStart_toStartOf="parent"
                       app:layout_constraintTop_toTopOf="parent"
-                      tools:text="Title"/>
+                      tools:text="Custom data binder"/>
 
-            <TextView android:layout_height="wrap_content"
-                      android:layout_marginBottom="8dp"
+            <TextView android:id="@+id/description"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="8dp"
                       android:layout_marginStart="8dp"
                       android:layout_marginTop="8dp"
-                      android:layout_width="wrap_content"
-                      app:layout_constraintBottom_toBottomOf="parent"
+                      android:layout_width="0dp"
+                      android:textAppearance="@style/TextAppearance.App.Body"
+                      app:layout_constraintEnd_toEndOf="parent"
                       app:layout_constraintStart_toStartOf="parent"
                       app:layout_constraintTop_toBottomOf="@+id/title"
                       tools:text="@tools:sample/lorem"/>
+
+            <TextView
+                    android:drawablePadding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/ic_github_original"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/see_on_github"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description"/>
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </layout>

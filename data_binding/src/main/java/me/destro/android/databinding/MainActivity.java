@@ -21,5 +21,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.basic.title.setText(R.string.basic_example_title);
+        binding.basic.description.setText(R.string.basic_example_description);
     }
 }
