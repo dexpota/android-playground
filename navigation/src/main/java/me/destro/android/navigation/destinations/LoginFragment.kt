@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import me.destro.android.navigation.LoginNavigationDirections
 import me.destro.android.navigation.R
 import me.destro.android.navigation.databinding.FragmentLoginBinding
 
@@ -20,7 +21,7 @@ class LoginFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
 
         binding.login.setOnClickListener {
-            findNavController().navigate(R.id.action_registration_pop)
+            findNavController().navigate(LoginNavigationDirections.actionGlobalSocialFragment())
         }
         binding.register.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.registerFragment))
 

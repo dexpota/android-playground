@@ -22,6 +22,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/simple_navigation" />-->
+                app:navGraph="@navigation/main_navigation" />-->
     </FrameLayout>
 </layout>
