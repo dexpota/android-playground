@@ -1,17 +1,14 @@
-package me.destro.android.navigation.destinations
+package me.destro.android.navigation.fullexample.destinations
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.annotation.NavigationRes
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import me.destro.android.navigation.MainNavigationDirections
 import me.destro.android.navigation.R
-import me.destro.android.navigation.databinding.ActivityNavigationHostBinding
 import me.destro.android.navigation.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {

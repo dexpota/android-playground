@@ -1,4 +1,4 @@
-package me.destro.android.navigation.destinations
+package me.destro.android.navigation.fullexample.destinations
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
