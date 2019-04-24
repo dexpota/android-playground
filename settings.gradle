@@ -1,1 +1,1 @@
-include ':app', ':core', ':navigation', ':support_design_samples', ':data_binding', ':spinkit_samples', ':common'
+include ':app', ':webservices', ':navigation', ':support_design_samples', ':data_binding', ':spinkit_samples', ':common'
