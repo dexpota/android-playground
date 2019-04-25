@@ -8,7 +8,7 @@
         <variable name="user" type="me.destro.android.databinding.model.User"/>
         <variable name="observableUser" type="me.destro.android.databinding.model.ObservableUser"/>
 
-        <import type="me.destro.android.core.utilities.SpannableUtils"/>
+        <import type="me.destro.android.common.utilites.SpannableUtils"/>
         <import type="android.text.TextUtils"/>
     </data>
     <LinearLayout

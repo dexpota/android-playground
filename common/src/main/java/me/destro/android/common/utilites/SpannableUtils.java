@@ -1,4 +1,4 @@
-package me.destro.android.core.utilities;
+package me.destro.android.common.utilites;
 
 import android.graphics.Typeface;
 import android.text.Spannable;
