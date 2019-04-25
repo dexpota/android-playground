@@ -1,8 +1,8 @@
 package me.destro.android.design
 
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import me.destro.android.design.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

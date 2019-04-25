@@ -1,7 +1,7 @@
 package me.destro.android.databinding.model
 
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import me.destro.android.databinding.BR
 
 class ObservableUser : BaseObservable() {
