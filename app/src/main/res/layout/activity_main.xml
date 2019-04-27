@@ -1,32 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <LinearLayout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/rvExamples"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_sample_preview"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             tools:context="me.destro.android.playground.MainActivity">
 
-        <TextView
-                android:text="Examples"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        <Button android:id="@+id/google_navigation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/google_navigation"/>
-
-        <Button android:id="@+id/observable_errors"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/observables"/>
-
-        <Button android:id="@+id/alert_dialog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alert Dialog"/>
-
-    </LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 </layout>
