@@ -1,3 +1,7 @@
 package me.destro.android.common
 
-data class ExampleItem(var title: String, var description: String)
+data class ExampleItem(
+    var title: String,
+    var description: String,
+    var activity: Class<*>
+)

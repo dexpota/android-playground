@@ -12,6 +12,12 @@ import android.view.LayoutInflater
 class ExampleAdapter : RecyclerView.Adapter<ExampleAdapter.ViewHolder>() {
     var exampleItems: List<ExampleItem>? = null
 
+    private var listener: ((ExampleItem) -> Unit)? = null
+
+    fun setOnItemClickedListener(listener: ((ExampleItem) -> Unit)) {
+        this.listener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
@@ -23,9 +29,8 @@ class ExampleAdapter : RecyclerView.Adapter<ExampleAdapter.ViewHolder>() {
     override fun getItemCount(): Int = exampleItems?.size ?: 0
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(exampleItems?.get(position) ?: return)
+        holder.bindView(exampleItems?.get(position) ?: return, listener)
     }
-
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
@@ -34,7 +39,11 @@ class ExampleAdapter : RecyclerView.Adapter<ExampleAdapter.ViewHolder>() {
         private var title: TextView = binding.title
         private var description: TextView = binding.description
 
-        fun bindView(item: ExampleItem) {
+        fun bindView(item: ExampleItem, listener: ((ExampleItem) -> Unit)?) {
+            itemView.setOnClickListener {
+                if (listener != null)
+                    listener(item)
+            }
             title.text = item.title
             description.text = item.description
         }
