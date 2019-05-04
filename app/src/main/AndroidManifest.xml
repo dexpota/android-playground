@@ -9,10 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="me.destro.android.playground.reactivex.ObservableErrors">
+        <activity android:name="me.destro.android.playground.dialogs.DialogActivity">
         </activity>
-        <activity android:name="me.destro.android.playground.architecture.simple.SimpleArchitecture">
-        </activity>
+        <activity android:name="me.destro.android.playground.reactivex.ObservableErrors"/>
+        <activity android:name="me.destro.android.playground.architecture.simple.SimpleArchitecture"/>
+        <activity android:name="me.destro.android.playground.permissions.PermissionsActivity"/>
         <activity android:name="me.destro.android.playground.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import me.destro.android.common.ExampleAdapter
 import me.destro.android.common.ExampleItem
+import me.destro.android.playground.permissions.PermissionsActivity
 import me.destro.android.playground.reactivex.ObservableErrors
 import me.destro.playground.android.databinding.ActivityMainBinding
 import me.destro.playground.android.R
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity() {
         val adapter = ExampleAdapter()
 
         adapter.exampleItems = listOf(
-            ExampleItem("RxBinding", "Test of rx binding", ObservableErrors::class.java)
+            ExampleItem("RxBinding", "Test of rx binding", ObservableErrors::class.java),
+            ExampleItem("Permissions", "Permission", PermissionsActivity::class.java),
+            ExampleItem("Architectures", "Architecture", PermissionsActivity::class.java)
         )
 
         adapter.setOnItemClickedListener { example ->
@@ -30,24 +33,5 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvExamples.adapter = adapter
 
-        /*val fastAdapter = FastAdapter.with(itemAdapter)
-        binding.rvExamples.setAdapter(fastAdapter)
-        itemAdapter.add(ITEMS)*/
-
-
-        /*binding.alertDialog.setOnClickListener {
-            AlertDialog.Builder(this)
-                .setTitle(getString(R.string.dialog_generic_title))
-                .setMessage(getString(R.string.dialog_generic_message))
-                .setPositiveButton(getString(R.string.dialog_generic_positive), null)
-                .setNegativeButton(getString(R.string.dialog_generic_negative), null)
-                .setNeutralButton(getString(R.string.dialog_generic_neutral), null)
-                .show()
-        }*/
-
-        /*binding.observableErrors.setOnClickListener {
-            val intent = Intent(this, ObservableErrors::class.java)
-            startActivity(intent)
-        }*/
     }
 }
