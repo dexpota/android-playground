@@ -1,4 +1,4 @@
-package me.destro.android.databinding.model
+package me.destro.android.playground.jetpack.databinding.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

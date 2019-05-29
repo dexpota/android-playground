@@ -1,9 +1,9 @@
-package me.destro.android.databinding.reactions;
+package me.destro.android.playground.jetpack.databinding.reactions;
 
 import android.util.Log;
 import android.view.View;
-import me.destro.android.databinding.model.ObservableUser;
-import me.destro.android.databinding.model.User;
+import me.destro.android.playground.jetpack.databinding.model.ObservableUser;
+import me.destro.android.playground.jetpack.databinding.model.User;
 
 public class UserReaction {
     private static final String TAG = UserReaction.class.getSimpleName();

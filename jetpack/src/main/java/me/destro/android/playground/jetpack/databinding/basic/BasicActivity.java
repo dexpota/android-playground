@@ -1,16 +1,16 @@
-package me.destro.android.databinding.basic;
+package me.destro.android.playground.jetpack.databinding.basic;
 
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import me.destro.android.databinding.ArchitectureApplication;
+import me.destro.android.playground.jetpack.databinding.ArchitectureApplication;
 import me.destro.android.databinding.R;
 import me.destro.android.databinding.databinding.ActivityBasicBinding;
-import me.destro.android.databinding.model.ObservableUser;
-import me.destro.android.databinding.model.User;
-import me.destro.android.databinding.reactions.UserReaction;
+import me.destro.android.playground.jetpack.databinding.model.ObservableUser;
+import me.destro.android.playground.jetpack.databinding.model.User;
+import me.destro.android.playground.jetpack.databinding.reactions.UserReaction;
 import org.joda.time.LocalDateTime;
 
 import java.util.Arrays;

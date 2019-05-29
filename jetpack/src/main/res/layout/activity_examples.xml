@@ -9,7 +9,7 @@
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:orientation="vertical"
-            tools:context=".MainActivity">
+            tools:context="me.destro.android.playground.jetpack.databinding.MainActivity">
 
         <include android:id="@+id/basic"
                  layout="@layout/item_sample_preview"/>

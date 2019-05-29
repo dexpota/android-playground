@@ -1,11 +1,11 @@
-package me.destro.android.databinding;
+package me.destro.android.playground.jetpack.databinding;
 
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import me.destro.android.databinding.basic.BasicActivity;
-import me.destro.android.databinding.databinding.ActivityExamplesBinding;
+import me.destro.android.playground.jetpack.R;
+import me.destro.android.playground.jetpack.databinding.basic.BasicActivity;
 
 public class MainActivity extends AppCompatActivity {
 

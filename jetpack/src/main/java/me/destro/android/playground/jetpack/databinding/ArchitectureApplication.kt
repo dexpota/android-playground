@@ -1,4 +1,4 @@
-package me.destro.android.databinding
+package me.destro.android.playground.jetpack.databinding
 
 import android.app.Application
 import me.destro.android.core.api.RetrofitModule
