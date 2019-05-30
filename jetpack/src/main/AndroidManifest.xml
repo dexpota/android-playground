@@ -4,5 +4,7 @@
     <application>
         <activity android:name=".databinding.MainActivity"/>
         <activity android:name=".databinding.basic.BasicActivity"/>
+        <activity android:name=".navigation.MainActivity"/>
+        <activity android:name=".navigation.fullexample.FullExampleActivity"/>
     </application>
 </manifest>

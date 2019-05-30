@@ -1,14 +1,15 @@
-package me.destro.android.navigation
+package me.destro.android.playground.jetpack.navigation
 
 import android.content.Intent
 import androidx.databinding.DataBindingUtil
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import me.destro.android.navigation.databinding.ActivityExamplesBinding
-import me.destro.android.navigation.fullexample.FullExampleActivity
-import me.destro.android.navigation.databinding.ActivityNavigationHostBinding
+import me.destro.android.playground.jetpack.navigation.fullexample.FullExampleActivity
+import me.destro.android.playground.jetpack.R
+import me.destro.android.playground.jetpack.databinding.ActivityExamplesBinding
+import me.destro.android.playground.jetpack.databinding.ActivityNavigationHostBinding
 
-class MainActivity : AppCompatActivity() {
+public class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNavigationHostBinding
 

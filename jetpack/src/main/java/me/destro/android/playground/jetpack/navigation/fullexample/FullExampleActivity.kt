@@ -1,4 +1,4 @@
-package me.destro.android.navigation.fullexample
+package me.destro.android.playground.jetpack.navigation.fullexample
 
 import androidx.databinding.DataBindingUtil
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.navigateUp
-import me.destro.android.navigation.R
-import me.destro.android.navigation.databinding.ActivityNavigationHostBinding
+import me.destro.android.playground.jetpack.R
+import me.destro.android.playground.jetpack.databinding.ActivityNavigationHostBinding
 
 class FullExampleActivity : AppCompatActivity() {
 

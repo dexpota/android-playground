@@ -1,4 +1,4 @@
-package me.destro.android.navigation.fullexample.destinations
+package me.destro.android.playground.jetpack.navigation.fullexample.destinations
 
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
-import me.destro.android.navigation.R
-import me.destro.android.navigation.databinding.FragmentSocialBinding
+import me.destro.android.playground.jetpack.R
+import me.destro.android.playground.jetpack.databinding.FragmentSocialBinding
 
 class SocialFragment : Fragment() {
 

@@ -1,1 +1,1 @@
-include ':app', ':webservices', ':navigation', ':support_design', ':spinkit', ':common', ':jetpack'
+include ':app', ':webservices', ':support_design', ':spinkit', ':common', ':jetpack'

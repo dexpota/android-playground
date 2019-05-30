@@ -1,4 +1,4 @@
-package me.destro.android.navigation.fullexample.destinations
+package me.destro.android.playground.jetpack.navigation.fullexample.destinations
 
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import me.destro.android.navigation.LoginNavigationDirections
-import me.destro.android.navigation.R
-import me.destro.android.navigation.databinding.FragmentLoginBinding
+import me.destro.android.playground.jetpack.LoginNavigationDirections
+import me.destro.android.playground.jetpack.R
+import me.destro.android.playground.jetpack.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 

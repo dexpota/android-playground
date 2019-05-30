@@ -11,4 +11,12 @@
     <string name="basic_example_title">Basic data binding example</string>
     <string name="basic_example_description">This basic example makes use of custom binding adapters, binding converters and binding methods</string>
     <string name="see_on_github">See on github</string>
+
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
+    <string name="observables">Observables</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="logout">logout</string>
 </resources>
