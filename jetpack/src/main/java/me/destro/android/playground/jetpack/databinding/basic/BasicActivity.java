@@ -3,11 +3,9 @@ package me.destro.android.playground.jetpack.databinding.basic;
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
-import me.destro.android.playground.jetpack.databinding.ArchitectureApplication;
-import me.destro.android.databinding.R;
-import me.destro.android.databinding.databinding.ActivityBasicBinding;
+import androidx.lifecycle.ViewModelProviders;
+import me.destro.android.playground.jetpack.R;
+import me.destro.android.playground.jetpack.databinding.ActivityBasicBinding;
 import me.destro.android.playground.jetpack.databinding.model.ObservableUser;
 import me.destro.android.playground.jetpack.databinding.model.User;
 import me.destro.android.playground.jetpack.databinding.reactions.UserReaction;
@@ -23,10 +21,11 @@ public class BasicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityBasicBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_basic);
 
-        // TODO move this into a repo
-        ArchitectureApplication.Companion.getTypicodeApi().users()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+
+        BasicActivityViewModel model = ViewModelProviders.of(this).get(BasicActivityViewModel.class);
+
+        // TODO handle the disposing of this disposable.
+        model.requestUsers()
                 .subscribe((users) -> {
                     if (users.size() > 0)
                         binding.setUser(convert(users.get(0)));
