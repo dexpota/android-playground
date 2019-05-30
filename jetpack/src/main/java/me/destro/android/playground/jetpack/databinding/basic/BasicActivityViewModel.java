@@ -9,7 +9,7 @@ import me.destro.android.playground.jetpack.databinding.ArchitectureApplication;
 
 import java.util.List;
 
-class BasicActivityViewModel extends ViewModel {
+public class BasicActivityViewModel extends ViewModel {
 
     Single<List<User>> requestUsers() {
         // TODO move this into a repo

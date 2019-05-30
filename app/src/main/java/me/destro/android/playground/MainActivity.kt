@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         adapter.exampleItems = listOf(
             ExampleItem("RxBinding", "Test of rx binding", ObservableErrors::class.java),
             ExampleItem("Permissions", "Permission", PermissionsActivity::class.java),
-            ExampleItem("Architectures", "Architecture", PermissionsActivity::class.java)
+            ExampleItem("Architectures", "Architecture", PermissionsActivity::class.java),
+            ExampleItem("data-binding", "data-binding", me.destro.android.playground.jetpack.databinding.MainActivity::class.java)
         )
 
         adapter.setOnItemClickedListener { example ->
