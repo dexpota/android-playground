@@ -2,7 +2,7 @@ package me.destro.android.playground.jetpack.databinding.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
-import me.destro.android.databinding.BR
+import me.destro.android.playground.jetpack.BR
 
 class ObservableUser : BaseObservable() {
     @get:Bindable
@@ -16,6 +16,6 @@ class ObservableUser : BaseObservable() {
     var lastName: String = ""
         set(value) {
             field = value
-            notifyPropertyChanged(BR.lastName)
+            notifyPropertyChanged(BR.observableUser)
         }
 }
