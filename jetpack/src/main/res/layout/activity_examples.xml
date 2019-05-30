@@ -13,6 +13,6 @@
 
         <include android:id="@+id/basic"
                  layout="@layout/item_sample_preview2"/>
-z
+
     </LinearLayout>
 </layout>
