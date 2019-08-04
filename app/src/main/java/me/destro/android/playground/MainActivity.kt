@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import me.destro.android.common.ExampleAdapter
 import me.destro.android.common.ExampleItem
+import me.destro.android.playground.floating.FloatingWidgetActivity
 import me.destro.android.playground.permissions.PermissionsActivity
 import me.destro.android.playground.reactivex.ObservableErrors
 import me.destro.playground.android.databinding.ActivityMainBinding
@@ -24,8 +25,9 @@ class MainActivity : AppCompatActivity() {
             ExampleItem("RxBinding", "Test of rx binding", ObservableErrors::class.java),
             ExampleItem("Permissions", "Permission", PermissionsActivity::class.java),
             ExampleItem("Architectures", "Architecture", PermissionsActivity::class.java),
+            ExampleItem("Floating widget", "Floating widget", FloatingWidgetActivity::class.java),
             ExampleItem("data-binding", "data-binding", me.destro.android.playground.jetpack.databinding.MainActivity::class.java),
-                ExampleItem("navigation", "navigation", me.destro.android.playground.jetpack.navigation.MainActivity::class.java)
+            ExampleItem("navigation", "navigation", me.destro.android.playground.jetpack.navigation.MainActivity::class.java)
         )
 
         adapter.setOnItemClickedListener { example ->

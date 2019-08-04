@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <!--Root container-->
+    <RelativeLayout
+            android:id="@+id/root_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+        <!--View while view is collapsed-->
+        <RelativeLayout
+                android:id="@+id/collapse_view"
+                android:layout_width="wrap_content"
+                android:visibility="visible"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!--Icon of floating widget -->
+            <ImageView
+                    android:id="@+id/action"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_circle"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_camera_alt"
+                    tools:ignore="ContentDescription"/>
+
+            <!--Close button-->
+            <ImageView
+                    android:id="@+id/close_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignRight="@+id/action"
+                    android:backgroundTint="#f00"
+                    android:padding="4dp"
+                    android:background="@drawable/ic_circle"
+                    android:src="@drawable/ic_action_cancel"
+                    tools:ignore="ContentDescription"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

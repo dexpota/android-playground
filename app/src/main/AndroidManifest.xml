@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.destro.playground.android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- This is essential to be able to draw a floating widget -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
             android:allowBackup="true"
@@ -11,6 +12,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name="me.destro.android.playground.floating.FloatingWidgetActivity">
+        </activity>
         <activity android:name="me.destro.android.playground.dialogs.DialogActivity">
         </activity>
         <activity android:name="me.destro.android.playground.reactivex.ObservableErrors"/>
@@ -23,6 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <service
+                android:enabled="true"
+                android:exported="false"
+                android:name="me.destro.android.playground.floating.services.FloatingViewService"/>
     </application>
 
 </manifest>
